@@ -9,7 +9,8 @@ body {
     -moz-osx-font-smoothing: grayscale;
     background: radial-gradient(#1e5850, #0c2b3a);
     color: #e1eeeb;
-    min-height: 100vh;
+    /* max-height: 100vh; */
+    overflow: hidden;
 }
 
 #Header{
@@ -19,6 +20,7 @@ body {
     padding : 1dvh 1dvh 2dvh 1dvh;
 }
 #page{
+    margin-bottom: 0;
     display:flex;   
     flex-direction: row;
     /* position: relative; */

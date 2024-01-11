@@ -1,6 +1,6 @@
 import './SideBar.css';
 
-export default function SideBar({addClick}) {
+export default function SideBar({ addClick , tasks , setPageid }) {
 
 
 
@@ -9,9 +9,10 @@ export default function SideBar({addClick}) {
       <button onClick={addClick} ><strong>+ Quest</strong></button> 
       <h2>Quests</h2>
       <ul>
-        <li>Quest app</li>
-        <li>Quest 2</li>
-        <li>Quest 3</li>
+        {tasks.length>0 ? null : <><p>No Quests Yet :( </p><br/> Click +Quest to add.</> }
+        { tasks.map((task)=>{
+          return <li onClick={()=>setPageid(task.tNo)} key={task.tNo} >{task.title}</li>
+        } )}
       </ul>
     </section>
   );
