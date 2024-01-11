@@ -1,0 +1,24 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+body {
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: radial-gradient(#1e5850, #0c2b3a);
+    color: #e1eeeb;
+    min-height: 100vh;
+}
+
+#Header{
+    max-width: fit-content;
+    margin: 5px auto;
+    max-height: 10dvh;
+    padding : 1dvh 1dvh 2dvh 1dvh;
+}
+#page{
+    display:flex;   
+    flex-direction: row;
+}

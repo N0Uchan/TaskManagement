@@ -1,0 +1,70 @@
+#pendingList{
+    background-color: #002d2a;
+    width: 38dvh;
+    height: 33dvh;
+    margin-left: 2dvh;
+    padding: 0px 0px 20px 0px;
+    border-radius: 0px 0px 8px 8px;
+}
+
+.subTask{
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    margin: 0px 0px 0px 12px;
+}
+
+.subName{
+    font-size: 14px;
+    margin: 0px;
+
+}
+#tasksList ul{
+    padding: 0px;
+}
+
+#doneBtn{
+    cursor: pointer;
+    background-color: #1c4b42;
+    width: 3.5dvh;
+    height: 3.5dvh;
+    color: #1c4b42;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 1px;
+    margin: 6px;
+    margin-left: 20px;
+    transition: all 0.2s ease-in-out;
+}
+
+#doneBtn:hover{
+    background-color: #006372;
+    border: 1px solid #006372;
+    color: #c6f4f2;
+    transition: all 0.2s ease-in-out;
+}
+
+#delBtn{
+    cursor: pointer;
+    background-color: #1c4b42;
+    width: 3.5dvh;
+    height: 3.5dvh;
+    color: #1c4b42;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 1px;
+    margin: 6px;
+    transition: all 0.2s ease-in-out;
+}
+
+#delBtn:hover{
+    background-color: #006372;
+    border: 1px solid #006372;
+    color: #c6f4f2;
+    transition: all 0.2s ease-in-out;
+}
+
+
+

@@ -1,0 +1,56 @@
+#sideBar{
+    background-color: black;
+    min-width: 11dvh;
+    width: 14dvw;
+    height: 70dvh;
+    padding: 8dvh 6dvh 6dvh 4dvh;
+    margin-left: 0dvh;
+    border-radius: 0px 20px 20px 0px;
+}
+
+#sideBar button{
+  cursor: pointer;
+  background-color: #54a399;
+  border: 1px solid #54a399;
+  padding: 0.4rem 1rem;
+  margin-bottom: 10px;
+  color: #061e1a;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  font-size: 18px;
+  transition: all 0.2s ease-in-out;   
+}
+
+#sideBar button:hover {
+  background-color: #3c8379;
+  border-color: #3c8379;
+  transition: all 0.2s ease-in-out;
+}
+
+#sideBar button:active{
+    transform: scale(0.98) ;
+}
+
+#sideBard h2{
+    margin-bottom: 10px;
+    font-size: large;
+}
+
+#sideBar ul {
+    list-style-type: none;
+    margin-bottom: 2px;
+}
+
+#sideBar li{
+    font-size: 18px;
+    max-width: fit-content;
+    margin-bottom: 8px;
+    margin-left: -10px;
+    padding: 6px 10px;
+    border-radius: 8px;
+}
+
+#sideBar li:hover{
+    background-color: #5d7b77;
+    cursor: pointer;
+}
