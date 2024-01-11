@@ -40,7 +40,6 @@
 
 #doneBtn:hover{
     background-color: #006372;
-    border: 1px solid #006372;
     color: #c6f4f2;
     transition: all 0.2s ease-in-out;
 }
@@ -61,7 +60,6 @@
 
 #delBtn:hover{
     background-color: #006372;
-    border: 1px solid #006372;
     color: #c6f4f2;
     transition: all 0.2s ease-in-out;
 }
