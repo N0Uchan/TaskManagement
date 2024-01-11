@@ -1,17 +1,33 @@
 import './EntryPage.css';
-export default function EntryPage() {
+import { forwardRef , useImperativeHandle, useRef  } from 'react';
+
+const EntryPage = forwardRef(function EntryPage({},ref) {
+
+  const dialog=useRef();
+
+  useImperativeHandle(ref,()=>({
+    show(){
+      dialog.current.show();
+    }
+  }));
+
   return (
-    <dialog id="entryPage" >
-      <form id="entryForm" className="entryDisplay1" >
+
+    <dialog ref={dialog} id="entryPage" >
+      <section id="entryForm" className="" >
         <h2>Task Details</h2>
-        <input type="text" placeholder="Add task" />
+        <input id="entryTitle" type="text" placeholder="Add title" />
         <textarea id="entryDescr" type="text" placeholder="Add description" />
-        <input type="date" placeholder="Due Date : dd.mm.yyyy" />
+        <input id="entryDate" type="date" placeholder="Due Date : dd.mm.yyyy" />
         <form id="entryButtons" method="dialog">
             <button type="submit">Save</button>
             <button type="button">Clear</button>
+            <button id="entryCloseBtn" method="dialog">X</button>
         </form>
-      </form>
+
+      </section>
     </dialog>
   );
-}
+});
+
+export default EntryPage;

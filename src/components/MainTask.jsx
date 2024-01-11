@@ -1,9 +1,12 @@
 import './MainTask.css';
 import TaskList from './TaskList';
+import EntryPage from './EntryPage';
 
-export default function MainTask() {
+export default function MainTask({dialogRef}) {
   return (
     <section id="mainTask" className="mainDisplay0" >
+      <EntryPage ref={dialogRef} /> 
+
       <div>
         <h2>Task Name</h2>
         <h5>Due Date :</h5>
@@ -15,7 +18,7 @@ export default function MainTask() {
 
       <h3>Tasks</h3>
       <form id="tasksForm">
-        <input type="text" placeholder="Task Name..." />
+        <input id="taskInput" type="text" placeholder="Task Name..." />
         <button id="addBtn" >Add</button>
       </form>
       <div id="tabBtns" >

@@ -5,13 +5,13 @@ export default function TaskList({ id }) {
             {/* map lists */}
             <div className="subTask" >
                 <h6 className='subName' >Task 1</h6>
-                <chkbx id="doneBtn" />
-                <chkbx id="delBtn" />
+                <div id="doneBtn" />
+                <div id="delBtn" />
             </div>
             <div className="subTask" >
                 <h6 className='subName' >Task 2</h6>
-                <chkbx id="doneBtn" />
-                <chkbx id="delBtn" />
+                <div id="doneBtn" />
+                <div id="delBtn" />
             </div>
             
             

@@ -21,4 +21,5 @@ body {
 #page{
     display:flex;   
     flex-direction: row;
+    /* position: relative; */
 }

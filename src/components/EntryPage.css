@@ -1,3 +1,15 @@
+#entryPage{
+    background-color: transparent;
+    border:none;
+    margin: 0;
+    padding: 0;    
+    height: 0;
+    z-index: 1;
+    position: relative;
+    top:-5dvh;
+    left:-3dvw;
+}
+
 #entryForm{
     background-color: #54a399;
     display: flex;
@@ -5,17 +17,20 @@
     gap:5px;
     align-items: center;
     width: 60dvw;
-    height: 64.5dvh;
-    padding: 8dvh 6dvh 6dvh 6dvh;
+    height: 65.5dvh;
+    min-width: 20dvh;
+    margin-right: 10px;
+    padding: 2dvh 6dvh 10dvh 6dvh;
     margin: 20px 0dvh;
     border-radius: 0px 20px 20px 0px;
 }
-.entryDisplay0{
+
+/* .entryDisplay0{
     opacity: 0;
 }
 .entryDisplay1{
     opacity: 1;
-}
+} */
 
 
 #entryForm h2{
@@ -27,18 +42,18 @@
 
 }
 
-#entryForm input{
+#entryTitle,#entryDate{
     font-size: 16px;
     color: #1c4b42;
     border: none;
-    width: 40dvw ;
-    height: 6dvh;
+    width: 20dvw ;
+    height: 5dvh;
     margin: 6px;
     font-weight: 600;
     padding-left: 8px;
     border-radius: 8px ;
 }
-#entryForm input:focus{
+#entryTitle:focus,#entryDate:focus{
     outline: none;
     border: 1px solid #ffa200;
     transform: scaleY(1.015);
@@ -48,7 +63,7 @@
     color: #1c4b42;
     border: none;
     width: 40dvw ;
-    height: 6dvh;
+    height: 16dvh;
     margin: 6px;
     font-weight: 600;
     padding-left: 8px;
@@ -61,16 +76,17 @@
 #entryDescr:focus{
     outline: none;
     border: 1px solid #ffa200;
-    height: 14dvh;
+    height: 20dvh;
     transform: scaleY(1.015);
     overflow-wrap: break-word;
-    animation: enlarge 0.5s ease-in-out;
+    transition: ease-in-out 0.4s ;
+    /* animation: enlarge 0.5s ease-in-out; */
     
 }
-#entryDescr:not(:focus){
-    height: 6dvh;
+/* #entryDescr:not(:focus){
+    height: 12dvh;
     animation: shrink 0.1s ease-in-out;
-}
+} */
 
 
 #entryButtons{
@@ -101,9 +117,15 @@
     transform: scale(0.98) ;
 }
 
-@keyframes enlarge {
+#entryCloseBtn{
+    position: absolute;
+    top:7dvh;
+    right: 7dvh;
+}
+
+/* @keyframes enlarge {
     0% {
-        height:6dvh
+        height:12dvh
     }
     100% {
         height: 14dvh;
@@ -116,4 +138,4 @@
     100% {
         height: 6dvh;
     }
-}
+} */
