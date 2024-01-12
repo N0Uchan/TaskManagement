@@ -22,7 +22,7 @@ export default function App() {
 
       <MainTask setTasks={setTasks} dialogRef={dialog} pageId={pageId} tasks={tasks} />
 
-      {/* <button onClick={()=>{console.log(tasks,'page:'+pageId)}}>console</button> */}
+      {/* <button onClick={()=>{console.log(tasks);console.log('page:'+pageId)}}>console</button> */}
     </main>
   );
 }

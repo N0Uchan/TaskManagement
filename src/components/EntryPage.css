@@ -76,7 +76,6 @@
 #entryDescr:focus{
     outline: none;
     border: 1px solid #ffa200;
-    height: 20dvh;
     transform: scaleY(1.015);
     overflow-wrap: break-word;
     transition: ease-in-out 0.4s ;
@@ -87,6 +86,27 @@
     height: 12dvh;
     animation: shrink 0.1s ease-in-out;
 } */
+
+#entryTitle.invalidField,#entryDescr.invalidField,#entryDate.invalidField{
+    animation: vibrate 0.2s ease-in-out;
+    box-shadow: -.3dvh .3dvh 1dvh rgba(255, 0, 0, 0.9);
+    transition: ease-in 0.2s ;
+    
+}
+
+#errorMsg{
+    color: red;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    margin-left: 6px;
+    margin-top: 2px;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+#errorMsg.vibrate{
+    animation: vibrate 0.2s ease-in-out ;
+}
 
 
 #entryButtons{
@@ -139,3 +159,31 @@
         height: 6dvh;
     }
 } */
+
+/* @keyframes vibrate {
+    0% {
+        transform: translateX(0px);
+    }
+    25% {
+        transform: translateX(2px);
+    }
+    50% {
+        transform: translateX(0px);
+    }
+    75% {
+        transform: translateX(-2px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+} */
+
+@keyframes vibrate {
+    0% { transform: translateX(0); }
+    2% { transform: translateX(-2px); }
+    4% { transform: translateX(2px); }
+    6% { transform: translateX(-2px); }
+    8% { transform: translateX(2px); }
+    10% { transform: translateX(-2px); }
+    100% { transform: translateX(0); }
+}
