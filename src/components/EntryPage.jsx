@@ -11,14 +11,23 @@ const EntryPage = forwardRef(function EntryPage({setTasks},ref) {
   const errMsg=useRef();
   const errorMsg = <p id="errorMsg" ref={errMsg} className='' ></p>
 
+  function resetForm(){
+    entryTitle.current.value='';
+    entryDescr.current.value='';
+    entryDate.current.value='';
+    errMsg.current.textContent='';
+  }
+
   useImperativeHandle(ref,()=>({
     show(){
+      resetForm()
       dialog.current.show();
     }
   }));
 
   function handleSubmit(event){
     event.preventDefault();
+    
     const title = entryTitle.current.value;
     const descr = entryDescr.current.value;
     const date = entryDate.current.value;
@@ -52,8 +61,8 @@ const EntryPage = forwardRef(function EntryPage({setTasks},ref) {
       const newTask=[...prevTask, {...task} ] ;
       return newTask;
     });
-    taskCount++;
-    dialog.current.close();
+    taskCount++;  
+    dialog.current.close();    
   }}
 
   function handleClear(event){
@@ -62,6 +71,8 @@ const EntryPage = forwardRef(function EntryPage({setTasks},ref) {
     entryDescr.current.value='';
     entryDate.current.value='';
   }
+
+
 
   return (
 
