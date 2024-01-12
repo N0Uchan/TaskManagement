@@ -56,6 +56,13 @@ const EntryPage = forwardRef(function EntryPage({setTasks},ref) {
     dialog.current.close();
   }}
 
+  function handleClear(event){
+    event.preventDefault();
+    entryTitle.current.value='';
+    entryDescr.current.value='';
+    entryDate.current.value='';
+  }
+
   return (
 
     <dialog ref={dialog} id="entryPage" >
@@ -85,7 +92,7 @@ const EntryPage = forwardRef(function EntryPage({setTasks},ref) {
 
         <form id="entryButtons" method="dialog">
             <button type="submit" onClick={handleSubmit} >Save</button>
-            <button type="button">Clear</button>
+            <button type="button" onClick={handleClear} >Clear</button>
             <button id="entryCloseBtn" method="dialog">X</button>
         </form>
         {errorMsg}
