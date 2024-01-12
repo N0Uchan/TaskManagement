@@ -3,7 +3,7 @@ import { forwardRef , useImperativeHandle, useRef , useState  } from 'react';
 let taskCount=1;
 
 
-const EntryPage = forwardRef(function EntryPage({setTasks , setSubTasks},ref) {
+const EntryPage = forwardRef(function EntryPage({ setTasks },ref) {
   const dialog=useRef();
   const entryTitle = useRef();
   const entryDescr = useRef();
@@ -46,8 +46,8 @@ const EntryPage = forwardRef(function EntryPage({setTasks , setSubTasks},ref) {
       setTimeout(()=>{entryTitle.current.className=""},200)
       console.log(errorMsg)
     }
-    else if(descr===''){
-      errMsg.current.textContent= 'Please enter a Description.'
+    else if(descr==='' || descr.length>200 ){
+      errMsg.current.textContent= 'Please enter a Description , less than 200 characters.'
       errMsg.current.className="vibrate";
       entryDescr.current.className="invalidField";
       setTimeout(()=>{errMsg.current.className=""},200)

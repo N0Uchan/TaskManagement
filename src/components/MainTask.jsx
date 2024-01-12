@@ -39,7 +39,7 @@ export default function MainTask({dialogRef , setTasks, pageId , tasks , subTask
         <h5>Due Date : { date }</h5>
       </div>
       
-      <p>{tasks[taskIndex].descr}</p>      
+      <p id="mainDescr" >{tasks[taskIndex].descr}</p>      
 
       <h3>Tasks</h3>
 
@@ -69,7 +69,7 @@ export default function MainTask({dialogRef , setTasks, pageId , tasks , subTask
 
   return (
     <section id="mainTask" className="mainDisplay0" >
-      <EntryPage setTasks={setTasks} ref={dialogRef} setSubTasks={setSubTasks} /> 
+      <EntryPage setTasks={setTasks} ref={dialogRef} /> 
       {pageBody}
 
       

@@ -33,11 +33,14 @@
 
 }
 
-#mainTask p{
+#mainDescr{
     margin: 0px 5px 4px 6px;
-    max-width: 70dvh;
-    overflow-wrap:break-word;
+    max-width: 120dvh;
+    max-height: 8dvh;
+    overflow-wrap:break-word;    
 }
+
+
 
 
 #mainTask h3{

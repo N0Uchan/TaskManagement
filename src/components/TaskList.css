@@ -5,13 +5,13 @@
     margin-left: 2dvh;
     padding: 0px 0px 20px 0px;
     border-radius: 0px 0px 8px 8px;
-    overflow-y: scroll;
-    
+    overflow-y: scroll;    
 }
 
 #pendingList::-webkit-scrollbar {
     width: 10px;
-    background-color: #002d2a; 
+    background-color: #002d2a;
+    border-radius: 10px;
 }
 
 #pendingList::-webkit-scrollbar-thumb {
@@ -22,7 +22,7 @@
 #pendingList {
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: thin;  /* Firefox */
-    scrollbar-color: #088d63 #002d2a; 
+    scrollbar-color: #088d63 #002d2a;   
 }
 
 .subTask{
