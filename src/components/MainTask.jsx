@@ -14,9 +14,11 @@ export default function MainTask({dialogRef , setTasks, pageId , tasks , subTask
 
   function addSubTask(event){
     event.preventDefault();
-    if(subTField.current.value===''){
+    if(subTField.current.value==='' || subTField.current.value.length>15){
       subTField.current.className="invalidField";
+      subTField.current.placeholder='Enter 1-15 characters only. ';
       setTimeout(()=>{subTField.current.className=""},250)
+      setTimeout(()=>{subTField.current.placeholder='Task Name...'},3000)
     }else{
     const subT = subTField.current.value;
     setSubTasks((prev)=>{
