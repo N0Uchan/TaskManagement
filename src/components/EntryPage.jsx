@@ -22,6 +22,9 @@ const EntryPage = forwardRef(function EntryPage({setTasks},ref) {
     show(){
       resetForm()
       dialog.current.show();
+    },
+    close(){
+      dialog.current.close();
     }
   }));
 

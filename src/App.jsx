@@ -10,6 +10,9 @@ export default function App() {
   function addClick() {
     dialog.current.show();
   }
+  function closeDialog(){
+    dialog.current.close();
+  }
 
   function setPage(id) {
     setPageId(id);
@@ -18,7 +21,7 @@ export default function App() {
   return (
     <main id="page">
       
-      <SideBar setPageid={setPage} tasks={tasks} addClick={addClick} />   
+      <SideBar setPageid={setPage} tasks={tasks} addClick={addClick} closeDialog={closeDialog} />   
 
       <MainTask setTasks={setTasks} dialogRef={dialog} pageId={pageId} tasks={tasks} />
 
