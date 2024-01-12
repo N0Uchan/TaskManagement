@@ -83,28 +83,31 @@ const EntryPage = forwardRef(function EntryPage({ setTasks },ref) {
 
     <dialog ref={dialog} id="entryPage" >
       <section id="entryForm" className="" >
-        <h2>Task Details</h2>
+        <h2>Quest Details</h2>
 
         <input 
           id="entryTitle" ref={entryTitle}
           type="text" 
-          placeholder="Add title" 
+          placeholder="Add Title" 
           required
           />
 
         <textarea 
         id="entryDescr"  ref={entryDescr}
         type="text" 
-        placeholder="Add description" 
+        placeholder="Add Description" 
         required
         />
 
-        <input 
-          id="entryDate"  ref={entryDate}
-          type="date" 
-          placeholder="Due Date : dd.mm.yyyy"
-          required 
-          />
+        <div id="entryDateDiv"  >
+          <p id="entryDatePara"> Due Date : </p>
+          <input 
+            id="entryDate"  ref={entryDate}
+            type="date" 
+            placeholder="Due Date : dd.mm.yyyy"
+            required 
+            />
+        </div>
 
         <form id="entryButtons" method="dialog">
             <button type="submit" onClick={handleSubmit} >Save</button>

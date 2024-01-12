@@ -41,8 +41,24 @@
 
 
 }
+#entryDateDiv{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    max-width: 60dvh;
+    background-color: white;
+    border-radius: 8px;
+}
+#entryDatePara{
+    margin:6px;
+    margin-right: 0;
+    padding:8px;
+    font-size: 16px;
+    font-weight: 600;
+    color : #1c4b42;
+}
 
-#entryTitle,#entryDate{
+#entryTitle{
     font-size: 16px;
     color: #1c4b42;
     border: none;
@@ -51,6 +67,16 @@
     margin: 6px;
     font-weight: 600;
     padding-left: 8px;
+    border-radius: 8px ;
+}
+#entryDate{
+    font-size: 16px;
+    color: #1c4b42;
+    border: none;
+    width: 15dvw ;
+    height: 5dvh;
+    margin: 6px;
+    font-weight: 600;
     border-radius: 8px ;
 }
 #entryTitle:focus,#entryDate:focus{
