@@ -8,21 +8,21 @@
     overflow-y: scroll;
     
 }
-::-webkit-scrollbar {
+
+#pendingList::-webkit-scrollbar {
     width: 10px;
-    background-color: #002d2a; /* Change to match your theme */
+    background-color: #002d2a; 
 }
 
-/* This will change the scrollbar thumb (the moving part) */
-::-webkit-scrollbar-thumb {
-    background-color: #319861; /* Change to match your theme */
+#pendingList::-webkit-scrollbar-thumb {
+    background-color: #088d63; 
     border-radius: 10px;
 }
 
 #pendingList {
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: thin;  /* Firefox */
-    scrollbar-color: #4CAF50 #002d2a; /* Change to match your theme */
+    scrollbar-color: #088d63 #002d2a; 
 }
 
 .subTask{

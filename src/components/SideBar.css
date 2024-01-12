@@ -38,7 +38,24 @@
 
 #sideBar ul {
     list-style-type: none;
+    height : 50vh;
     margin-bottom: 2px;
+    overflow-y: scroll;
+}
+#sideBar ul::-webkit-scrollbar {
+    width: 10px;
+    background-color: black;
+}
+
+
+#sideBar ul::-webkit-scrollbar-thumb {
+    background-color: #176c63; 
+    border-radius: 10px;
+}
+#sideBar ul {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: thin;  /* Firefox */
+    scrollbar-color: #176c63 black; 
 }
 
 #sideBar li{
