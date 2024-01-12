@@ -5,6 +5,7 @@ import MainTask from "./components/MainTask";
 export default function App() {
   const dialog = useRef();
   const [tasks, setTasks] = useState([]);
+  const [subTasks, setSubTasks] = useState([[],[],[],[]]);
   const [pageId, setPageId] = useState(null);
 
   function addClick() {
@@ -23,9 +24,12 @@ export default function App() {
       
       <SideBar setPageid={setPage} tasks={tasks} addClick={addClick} closeDialog={closeDialog} />   
 
-      <MainTask setTasks={setTasks} dialogRef={dialog} pageId={pageId} tasks={tasks} />
+      <MainTask 
+          subTasks={subTasks} setSubTasks={setSubTasks}
+          setTasks={setTasks} tasks={tasks}
+          dialogRef={dialog} pageId={pageId}  />
 
-      {/* <button onClick={()=>{console.log(tasks);console.log('page:'+pageId)}}>console</button> */}
+      {/* <button onClick={()=>{console.log(subTasks);}}>console</button> */}
     </main>
   );
 }

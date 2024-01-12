@@ -3,7 +3,7 @@ import { forwardRef , useImperativeHandle, useRef , useState  } from 'react';
 let taskCount=1;
 
 
-const EntryPage = forwardRef(function EntryPage({setTasks},ref) {
+const EntryPage = forwardRef(function EntryPage({setTasks , setSubTasks},ref) {
   const dialog=useRef();
   const entryTitle = useRef();
   const entryDescr = useRef();
@@ -36,6 +36,7 @@ const EntryPage = forwardRef(function EntryPage({setTasks},ref) {
     const date = entryDate.current.value;
     const tNo = taskCount;
     const task = {tNo,title,descr,date};
+    
 
     if(title===''){
       errMsg.current.textContent= 'Please enter a Title.'
@@ -60,6 +61,7 @@ const EntryPage = forwardRef(function EntryPage({setTasks},ref) {
       setTimeout(()=>{entryDate.current.className=""},200)      
     }
     else{
+
     setTasks((prevTask)=>{
       const newTask=[...prevTask, {...task} ] ;
       return newTask;

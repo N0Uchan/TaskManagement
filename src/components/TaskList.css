@@ -5,13 +5,32 @@
     margin-left: 2dvh;
     padding: 0px 0px 20px 0px;
     border-radius: 0px 0px 8px 8px;
+    overflow-y: scroll;
+    
+}
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: #002d2a; /* Change to match your theme */
+}
+
+/* This will change the scrollbar thumb (the moving part) */
+::-webkit-scrollbar-thumb {
+    background-color: #319861; /* Change to match your theme */
+    border-radius: 10px;
+}
+
+#pendingList {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: thin;  /* Firefox */
+    scrollbar-color: #4CAF50 #002d2a; /* Change to match your theme */
 }
 
 .subTask{
     display: flex;
     flex-direction:row;
+    justify-content: space-between;
     align-items: center;
-    margin: 0px 0px 0px 12px;
+    margin: 0px 0px 0dvh 1dvh;
 }
 
 .subName{
@@ -21,6 +40,11 @@
 }
 #tasksList ul{
     padding: 0px;
+}
+#tasklistBtnsDiv{
+    margin:0;
+    display:flex;
+    flex-direction: row;
 }
 
 #doneBtn{
@@ -33,7 +57,7 @@
     font-size: 16px;
     font-weight: 600;
     padding: 1px;
-    margin: 6px;
+    margin: .5dvh 1dvh ;
     margin-left: 20px;
     transition: all 0.2s ease-in-out;
 }
@@ -54,7 +78,7 @@
     font-size: 16px;
     font-weight: 600;
     padding: 1px;
-    margin: 6px;
+    margin:  .5dvh 1dvh;
     transition: all 0.2s ease-in-out;
 }
 

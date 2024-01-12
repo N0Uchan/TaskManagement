@@ -9,8 +9,8 @@ export default function SideBar({ addClick , tasks , setPageid ,closeDialog }) {
       <button onClick={addClick} ><strong>+ Quest</strong></button> 
       <h2>Quests</h2>
       <ul>
-        {tasks.length>0 ? null : <><p>No Quests Yet :( </p><br/> Click +Quest to add.</> }
-        { tasks.map((task)=>{
+        {tasks.length>0 ? null : <><p>No sub Quests Yet :( </p><br/> Click +Quest to add.</> }
+        {tasks.map((task)=>{
           return <li 
                 onClick={()=>{
                   setPageid(task.tNo);

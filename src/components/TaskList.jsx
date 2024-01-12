@@ -1,20 +1,35 @@
 import './TaskList.css';
-export default function TaskList({ id }) {
+
+
+export default function TaskList({ id , subTasks , taskIndex }) {
+
+
+    var list = undefined;
+    const pageSubTasks = [...subTasks[taskIndex]];
+    if(pageSubTasks.length>0){
+
+        list = pageSubTasks.map((task,index)=>{
+            return <div key={index} className="subTask" >
+                        <h6 className='subName' >{task.subT}</h6>
+                        <div id="tasklistBtnsDiv">
+                            <div id="doneBtn"  />
+                            <div id="delBtn" />
+                        </div>
+                    </div>
+        })
+    }else{
+        // console.log('no subTasks');
+        list = <>
+        <p style={{maxWidth:'fit-content',margin:'5dvh auto'}} >No subQuests Yet :( </p>
+        <br/>
+        <p style={{maxWidth:'fit-content',margin:'-2dvh auto'}} >Click Add to add.</p> 
+    </>
+    }
     return (
-        <ul id={id} >
-            {/* map lists */}
-            <div className="subTask" >
-                <h6 className='subName' >Task 1</h6>
-                <div id="doneBtn" />
-                <div id="delBtn" />
-            </div>
-            <div className="subTask" >
-                <h6 className='subName' >Task 2</h6>
-                <div id="doneBtn" />
-                <div id="delBtn" />
-            </div>
-            
-            
+        <ul id={id} > 
+            {/* <button onClick={()=>{console.log(pageSubTasks)}} ></button> */}
+            {list}
          </ul>
     )
 }
+                
