@@ -38,8 +38,8 @@ const EntryPage = forwardRef(function EntryPage({ setTasks },ref) {
     const task = {tNo,title,descr,date};
     
 
-    if(title===''){
-      errMsg.current.textContent= 'Please enter a Title.'
+    if(title==='' || title.length>20 ){
+      errMsg.current.textContent= 'Please enter a Title, maximum 20 characters.'
       errMsg.current.className="vibrate";
       entryTitle.current.className="invalidField";
       setTimeout(()=>{errMsg.current.className=""},200)

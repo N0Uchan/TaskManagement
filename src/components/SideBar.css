@@ -1,9 +1,9 @@
 #sideBar{
     background-color: black;
     min-width: 11dvh;
-    width: 14dvw;
+    width: 20dvw;
     height: 70dvh;
-    padding: 8dvh 6dvh 6dvh 4dvh;
+    padding: 8dvh 4dvh 8dvh 4dvh;
     margin-left: 0dvh;
     border-radius: 0px 20px 20px 0px;
 }
