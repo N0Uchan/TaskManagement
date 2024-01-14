@@ -19,9 +19,9 @@ const EntryPage = forwardRef(function EntryPage({ setTasks },ref) {
   }
 
   useImperativeHandle(ref,()=>({
-    show(){
+    open(){
       resetForm()
-      dialog.current.show();
+      dialog.current.showModal();
     },
     close(){
       dialog.current.close();

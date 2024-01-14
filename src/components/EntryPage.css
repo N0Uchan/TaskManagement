@@ -1,13 +1,12 @@
-#entryPage{
+#entryPage {
+    position: fixed;
+    margin: 1px;
+    padding: 14dvh 36dvh 22dvh 36dvh;
+    z-index: 10;    
+    border: none;
     background-color: transparent;
-    border:none;
-    margin: 0;
-    padding: 0;    
-    height: 0;
-    z-index: 1;
-    position: relative;
-    top:-5dvh;
-    left:-3dvw;
+    backdrop-filter: blur(5px) saturate(50%) contrast(65%) brightness(120%);  ; 
+
 }
 
 #entryForm{
@@ -16,13 +15,14 @@
     flex-direction: column;
     gap:5px;
     align-items: center;
-    width: 60dvw;
-    height: 65.5dvh;
-    min-width: 20dvh;
+    justify-content: center;
+    width: 64dvw;
+    height: 64dvh;
+    border-radius: 20px 20px 20px 20px;
+    /* min-width: 20dvh;
     margin-right: 10px;
     padding: 2dvh 6dvh 10dvh 6dvh;
-    margin: 20px 0dvh;
-    border-radius: 0px 20px 20px 0px;
+    margin: 20px 0dvh; */
 }
 
 /* .entryDisplay0{
@@ -35,7 +35,6 @@
 
 #entryForm h2{
     max-width: fit-content;
-    margin-bottom: 16pxpx;
     font-size: 30px;
     color: #1c4b42;
 
@@ -140,6 +139,7 @@
     flex-direction: row;
     gap: 10px;
     max-width: fit-content;
+    margin-bottom: 2dvh; ;
 
 }
 

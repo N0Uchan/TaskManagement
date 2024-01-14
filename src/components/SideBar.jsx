@@ -7,7 +7,9 @@ export default function SideBar({ addClick , tasks , setPageid ,closeDialog }) {
 
   return (
     <section id="sideBar" >
-      <div id="sideBarAddBtn" onClick={addClick} onMouseEnter={()=>{iconRef.current.play}} >
+      <div id="sideBarAddBtn" onClick={addClick}
+      //  onMouseEnter={()=>{iconRef.current.play}} 
+       >
         
           <strong>+ Quest</strong>
 
