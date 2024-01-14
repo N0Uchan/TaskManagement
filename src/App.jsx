@@ -9,7 +9,7 @@ export default function App() {
   const [pageId, setPageId] = useState(null);
 
   function addClick() {
-    dialog.current.show();
+    dialog.current.open();
   }
   function closeDialog(){
     dialog.current.close();
