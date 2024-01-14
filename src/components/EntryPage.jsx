@@ -31,8 +31,8 @@ const EntryPage = forwardRef(function EntryPage({ setTasks },ref) {
   function handleSubmit(event){
     event.preventDefault();
     
-    const title = entryTitle.current.value;
-    const descr = entryDescr.current.value;
+    const title = entryTitle.current.value.trim();
+    const descr = entryDescr.current.value.trim();
     const date = entryDate.current.value;
     const tNo = taskCount;
     const task = {tNo,title,descr,date};
